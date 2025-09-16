@@ -1,21 +1,15 @@
 public class Main {
-    public static void main(String[] args) {
-        // Simulating content for Page 1
-        System.out.println("Annual Report - Page 1");
-        System.out.println("=====================");
-        System.out.println("This is the content of the first page...");
-        System.out.println("... more content ...");
+    public static void main(String[] args) throws InterruptedException {
+        int total = 20;
 
-        // Form Feed: Signal the end of Page 1 and start of Page 2
-        System.out.println("\f"); // On a printer, this would eject the page.
-
-        // Content for Page 2
-        System.out.println("Annual Report - Page 2");
-        System.out.println("=====================");
-        System.out.println("This is the content on the second page.");
-
-        // Another Form Feed
-        System.out.println("\f"); // Eject for the next potential page.
-        System.out.println("End of Report.");
+        for (int i = 0; i <= total; i++) {
+            int width = 20; // Width of the progress bar
+            int progress = (i * width) / total;
+            String bar = "[" + "=".repeat(progress) + " ".repeat(width - progress) + "] " + (i*5) + "%";
+            
+            System.out.print("\r" + bar); // Overwrite the previous bar
+            Thread.sleep(200);
+        }
+        System.out.println("\n\f"); // Move to the next line when done
     }
 }

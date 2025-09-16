@@ -24,7 +24,10 @@ public class Main {
         // System.out.println(name.indexOf("a", 1));
         // System.out.println(name.lastIndexOf("a"));
         // System.out.println(name.lastIndexOf("a",2));
-        System.out.println(name.equals("Asraful"));
-        System.out.println(name.equalsIgnoreCase("asrAFul"));
+        // System.out.println(name.equals("Asraful"));
+        // System.out.println(name.equalsIgnoreCase("asrAFul"));
+
+        System.out.println("Today I have to do those things \n\t1. \"Task1\", \n\t2. \"Task2\", \n\t3. \\Task3\\, \n\t4. \\\\Task4\\\\");
+
     }
 }
